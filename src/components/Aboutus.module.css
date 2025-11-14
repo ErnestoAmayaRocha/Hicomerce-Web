@@ -1,0 +1,92 @@
+/* ===== Estilos Generales de la Sección ===== */
+.pageSection {
+  padding: 80px 5%;
+  background-color: #02abe7;
+}
+.pageSection:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ===== Contenido de Texto ===== */
+.contentWrapper {
+  text-align: left;
+}
+
+.contentWrapper h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+/* Línea decorativa debajo del título */
+.contentWrapper h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--naranja);
+}
+
+.contentWrapper p {
+  font-size: 26px;
+  color: #0a0a0a;
+  line-height: 1.8; 
+}
+
+/* ===== Contenedor de Imagen ===== */
+.imageWrapper {
+  width: 100%;
+  border-radius: 8px; 
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+.image {
+  width: 100%;
+  display: block; 
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;
+}
+
+.missionSection .imageWrapper {
+  order: -1; 
+}
+
+
+
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+@media (max-width: 767px) {
+  .pageSection {
+    padding: 60px 5%;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageWrapper {
+    order: 1;
+  }
+  .contentWrapper {
+    order: 2;
+    text-align: center; 
+  }
+  .contentWrapper h2::after {
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+   .contentWrapper h2 { font-size: 28px; }
+}

@@ -1,0 +1,124 @@
+.contactSection {
+  padding: 80px 5%;
+  background-color: #f9f9f9; 
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  align-items: center;
+  gap: 60px;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  grid-column: 1 / -1; 
+}
+
+.partners img {
+  height: 90px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.partners img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.formContent h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--textoNegro);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.formContent p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--textoNegro);
+}
+
+.formGroup input, .formGroup textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 2px rgba(2, 171, 231, 0.2);
+}
+
+.submitButton {
+  background-color: var(--naranja);
+  color: var(--textoBlanco);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: var(--azul);
+}
+
+/* ===== Imagen del Robot ===== */
+.robotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robotContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ======================================= */
+/* ===== MEDIA QUERY PARA RESPONSIVE ===== */
+/* ======================================= */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .formContent h2 {
+    font-size: 28px;
+  }
+
+  .robotContainer {
+    order: -1; /* Mueve el robot hacia arriba */
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,145 @@
+/* ===== Contenedor Principal de la Sección ===== */
+.testimonialsSection {
+  padding: 80px 5%;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--textoNegro);
+  margin-bottom: 60px;
+}
+
+/* ===== Estructura del Carrusel ===== */
+.carouselContainer {
+  position: relative;
+  padding: 0 60px; /* Espacio para los botones en desktop */
+}
+
+.carouselWindow {
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ===== Tarjeta de Testimonio Individual ===== */
+.testimonialCard {
+  flex: 0 0 100%; /* Cada tarjeta ocupa el 100% de la ventana */
+  box-sizing: border-box;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonialCard blockquote p {
+  font-size: 22px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 800px; /* Evita que el texto se estire demasiado en pantallas anchas */
+}
+
+.testimonialCard figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clientPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.clientName {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--textoNegro);
+}
+
+.clientRole {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== Botones de Navegación ===== */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.navButton:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-50%) scale(1.1);
+}
+.navButton svg {
+  width: 24px;
+  height: 24px;
+}
+.prev { left: 0; }
+.next { right: 0; }
+
+
+/* ======================================= */
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+/* ======================================= */
+@media (max-width: 767px) {
+  .container {
+    padding: 30px 0;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .carouselContainer {
+    padding: 0;
+  }
+  .testimonialCard blockquote p {
+    font-size: 18px;
+  }
+  .clientPhoto {
+    width: 90px;
+    height: 90px;
+  }
+  .navButton {
+    /* display: none; */
+    width: 30px;
+    height: 30px;
+  }
+  .navButton svg{
+    width: 30px;
+    height: 30px;
+  }
+}

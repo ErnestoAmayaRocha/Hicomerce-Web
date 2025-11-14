@@ -1,0 +1,59 @@
+/* ===== Contenedor Principal de la Sección ===== */
+.resultsSection {
+  background-color: #000000;
+  padding: 60px 5%;
+  border-top: 1px solid #333; 
+  border-bottom: 1px solid #333;
+}
+
+.metricsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; 
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ===== Estilo de cada Métrica Individual ===== */
+.metricItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metricNumber {
+  font-size: 72px;
+  font-weight: 800;
+  color: #FF3B00;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.metricDescription {
+  font-size: 16px;
+  color: var(--textoBlanco);
+  line-height: 1.5;
+  max-width: 250px; 
+}
+
+/* ======================================= */
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+/* ======================================= */
+@media (max-width: 767px) {
+  .resultsSection {
+    padding: 50px 5%;
+  }
+  .metricsContainer {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos apilados */
+    gap: 50px; /* Aumenta el espacio vertical entre métricas */
+  }
+  .metricNumber {
+    font-size: 60px;
+  }
+  .metricDescription {
+    font-size: 15px;
+  }
+}

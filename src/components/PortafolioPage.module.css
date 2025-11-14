@@ -1,0 +1,155 @@
+/* ===== 1. Hero Section ===== */
+.heroSection {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 100px 5% 300px 5%;
+  color: var(--textoBlanco);
+  background-color: #000;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.heroBackground img {
+  filter: brightness(50%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroSection h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  padding-top: 6.5%;
+}
+
+.heroSection p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===== Encabezado de la Página ===== */
+.headerSection {
+  padding: 5% 5% 0.1px 5%;
+  text-align: center;
+  background-color: #ffffff; 
+}
+
+.headerSection h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--textoNegro);
+  margin-bottom: 15px;
+}
+
+.headerSection p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* ===== Navegación de Filtros ===== */
+.filterNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filterButton {
+  background-color: #e9e9e9;
+  color: #555;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #ddd;
+}
+
+.filterButtonActive {
+  background-color: var(--naranja);
+  color: var(--textoBlanco);
+}
+
+/* ===== Cuadrícula de Proyectos ===== */
+.projectsGridSection {
+  padding: 50px 5% 80px 5%;
+}
+
+.projectsGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ===== Tarjeta de Proyecto Individual ===== */
+.projectCard {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+.projectCard:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.imageWrapper { overflow: hidden; }
+.projectImage {
+  width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.projectCard:hover .projectImage { transform: scale(1.05); }
+.cardCaption { padding: 25px; text-align: left; }
+.clientName {
+  font-size: 20px; font-weight: 700; color: var(--textoNegro);
+  margin-bottom: 10px;
+}
+.projectDescription {
+  font-size: 16px; color: #555; line-height: 1.6;
+  margin-bottom: 20px;
+}
+.viewProjectLink {
+  color: var(--azul); font-weight: 600; border: 1px solid var(--azul);
+  padding: 8px 16px; border-radius: 5px; display: inline-block;
+  transition: all 0.3s ease;
+}
+.viewProjectLink:hover {
+  background-color: var(--azul); color: var(--textoBlanco);
+}
+
+
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+@media (max-width: 767px) {
+  .headerSection h1 { font-size: 32px; }
+  .projectsGrid {
+    grid-template-columns: 1fr; 
+  }
+}

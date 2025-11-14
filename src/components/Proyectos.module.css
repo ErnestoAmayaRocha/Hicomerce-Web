@@ -1,0 +1,148 @@
+/* ===== Contenedor Principal de la Sección ===== */
+.resultsSection {
+  padding: 80px 5%;
+  background-color: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--textoNegro);
+  margin-bottom: 15px;
+}
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+.viewMoreLink {
+  margin-top: 50px;
+  display: inline-block;
+  color: var(--naranja);
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.viewMoreLink:hover {
+  border-bottom-color: var(--naranja);
+}
+
+/* ===== Estructura del Carrusel (CORREGIDO) ===== */
+.carouselContainer {
+  position: relative;
+}
+/* La "ventana" ahora es el contenedor de scroll */
+.carouselWindow {
+  display: flex;
+  overflow-x: auto; /* Permite el scroll horizontal */
+  scroll-snap-type: x mandatory; /* Activa el "imán" horizontal */
+  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}
+.carouselWindow::-webkit-scrollbar {
+  display: none; /* Oculta la barra de scroll en otros navegadores */
+}
+/* El track es el que contiene las tarjetas */
+.carouselTrack {
+  display: flex;
+  padding-bottom: 20px; /* Evita que la sombra se corte */
+}
+
+/* ===== Tarjeta de Proyecto Individual ===== */
+.projectCard {
+  flex: 0 0 50%; /* Dos tarjetas visibles en desktop */
+  scroll-snap-align: start; /* Cada tarjeta es un punto de "imán" */
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.cardFigure {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+.cardFigure:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.imageWrapper {
+  overflow: hidden;
+}
+.projectImage {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.cardFigure:hover .projectImage {
+  transform: scale(1.05);
+}
+.cardCaption {
+  padding: 25px;
+  text-align: left;
+}
+.clientName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--textoNegro);
+  margin-bottom: 10px;
+}
+.projectDescription {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.viewProjectLink {
+  color: var(--azul);
+  font-weight: 600;
+  border: 1px solid var(--azul);
+  padding: 8px 16px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.viewProjectLink:hover {
+  background-color: var(--azul);
+  color: var(--textoBlanco);
+}
+
+/* ===== Botones de Navegación ===== */
+.navButton {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.navButton:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.prev { left: -25px; }
+.next { right: -25px; }
+
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+@media (max-width: 767px) {
+  .projectCard {
+    flex: 0 0 90%; /* Hacemos la tarjeta un poco más pequeña que el 100% para que se vea parte de la siguiente */
+  }
+  .carouselContainer {
+    padding: 0 15px; /* Espacio para que las tarjetas no peguen al borde */
+  }
+  .navButton {
+    display: none; /* Ocultamos botones, priorizando el swipe */
+  }
+}

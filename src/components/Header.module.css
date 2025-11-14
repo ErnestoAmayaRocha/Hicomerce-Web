@@ -1,0 +1,172 @@
+/* ===== Base del Header ===== */
+.header {
+  background-color: var(--negroFooter);
+  padding: 15px 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 80px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #141414;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto; 
+}
+
+.nav.menuAbierto {
+  transform: translateX(0);
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.navLinks a, .navLinks summary {
+  color: var(--textoBlanco);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px 20px;
+  display: block;
+  cursor: pointer;
+}
+
+.navLinks a:hover, .navLinks summary:hover {
+  color: var(--azul);
+}
+
+.dropdown ul {
+  list-style: none;
+  padding-left: 20px; 
+}
+.dropdown a {
+  font-size: 16px;
+}
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.searchBtn img {
+  height: 24px;
+  width: 24px;
+}
+
+.btnAsesoria {
+  display: none;
+  background-color: var(--naranja);
+  color: var(--textoBlanco);
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.btnAsesoria:hover {
+  background-color: var(--azul);
+  color: var(--textoBlanco);
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--textoBlanco);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.abierto .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.abierto .line2 {
+  opacity: 0;
+}
+.hamburger.abierto .line3 {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* ===== MEDIA QUERY PARA DESKTOP (1025+) ===== */
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    background: none;
+    width: auto;
+    overflow: visible;
+  }
+
+  .navLinks {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .navLinks a, .navLinks summary {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  /* Estilos para el dropdown en desktop */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 200px;
+  }
+  .dropdown:hover ul, .dropdown details[open] ul {
+    display: block;
+  }
+  .dropdown details > summary::-webkit-details-marker {
+    display: none; 
+  }
+  .dropdown summary {
+    list-style: none; 
+  }
+
+  .btnAsesoria {
+    display: inline-block;
+  }
+}

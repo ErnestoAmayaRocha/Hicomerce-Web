@@ -1,0 +1,83 @@
+    /* ===== IMPORTACIÓN DE FUENTES ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+    /* ===== VARIABLES GLOBALES (PALETA DE COLORES, FUENTES, ETC) ===== */
+    :root {
+      --naranja: #FF3B00;
+      --azul: #02ABE7;
+      --azulCielo: #E6EFFA;
+      --morado: #9b9af3;
+      --textoBlanco: #F0F0F0;
+      --textoNegro: #2B2B2B;
+      --deshabilitado: #E9E9E9;
+      --textoDeshabilitado: #D6D6D6;
+      --azulFuerte: #020E38;
+      --borderColor: #575757;
+      --inputsColor: #231F20;
+      --inputsActivo: #E9F4FF;
+      --inputsDisabled: #DBDBDB;
+      --inputsTxtDisabled: #BEBEBE;
+      --borderValid: #005531;
+      --inputValid: #C1FFE0;
+      --borderInValid: #F70000;
+      --inputInValid: #FFE8E7;
+      --fontFamilyAlbert: "Albert Sans", sans-serif;
+      --negroFooter: #141414;
+    }
+
+    /* ===== RESETEO Y ESTILOS BASE ===== */
+    * {
+      box-sizing: border-box;
+      font-family: var(--fontFamilyAlbert);
+      color: var(--textoNegro);
+      line-height: normal;
+      font-weight: 400;
+      padding: 0px;
+      margin: 0px;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    *:hover {
+      transition: 0.5s;
+    }
+
+    body {
+      background-color: #FFFFFF;
+    }
+
+    li::marker {
+      content: none;
+    }
+
+    /* ===== CLASES DE UTILIDAD/AYUDA (Puedes mantenerlas aquí si las usas en muchos componentes) ===== */
+    .BGAzulCielo {
+      background-color: var(--azulCielo);
+    }
+    .BGAzulMarca {
+      background-color: var(--azul);
+      color: var(--textoBlanco);
+    }
+    .BGNegro {
+      background-color: black;
+      color: var(--textoBlanco);
+    }
+    .CBlanco {
+      color: var(--textoBlanco);
+    }
+    .CNegro {
+      color: var(--textoNegro);
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }

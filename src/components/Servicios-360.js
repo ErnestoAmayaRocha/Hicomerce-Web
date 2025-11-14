@@ -1,0 +1,94 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Servicios-360.module.css";
+
+// --- Importa las imágenes ---
+import heroBg from '../assets/Servicios-360/evolucioon.webp';
+
+// --- Iconos SVG como componentes ---
+const IconAlcanzarMeta = () => 
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="55" viewBox="0 0 50 55" fill="none"><path d="M26.4824 53.1448L26.4549 53.1498L26.2774 53.2373L26.2274 53.2473L26.1924 53.2373L26.0149 53.1498C25.9883 53.1415 25.9683 53.1457 25.9549 53.1623L25.9449 53.1873L25.9024 54.2573L25.9149 54.3073L25.9399 54.3398L26.1999 54.5248L26.2374 54.5348L26.2674 54.5248L26.5274 54.3398L26.5574 54.2998L26.5674 54.2573L26.5249 53.1898C26.5183 53.1632 26.5041 53.1482 26.4824 53.1448ZM27.1449 52.8623L27.1124 52.8673L26.6499 53.0998L26.6249 53.1248L26.6174 53.1523L26.6624 54.2273L26.6749 54.2573L26.6949 54.2748L27.1974 54.5073C27.2291 54.5157 27.2533 54.509 27.2699 54.4873L27.2799 54.4523L27.1949 52.9173C27.1866 52.8873 27.1699 52.869 27.1449 52.8623ZM25.3574 52.8673C25.3464 52.8607 25.3333 52.8585 25.3207 52.8613C25.3081 52.8641 25.2971 52.8716 25.2899 52.8823L25.2749 52.9173L25.1899 54.4523C25.1916 54.4823 25.2058 54.5023 25.2324 54.5123L25.2699 54.5073L25.7724 54.2748L25.7974 54.2548L25.8074 54.2273L25.8499 53.1523L25.8424 53.1223L25.8174 53.0973L25.3574 52.8673Z" fill="#FF3B00"/><path d="M25 0C25.9383 0 26.8633 0.0508336 27.775 0.1525C28.1013 0.188614 28.4174 0.28865 28.705 0.446897C28.9927 0.605145 29.2464 0.818504 29.4516 1.07479C29.6568 1.33108 29.8096 1.62528 29.9011 1.9406C29.9926 2.25591 30.0211 2.58616 29.985 2.9125C29.9489 3.23883 29.8489 3.55486 29.6906 3.84254C29.5324 4.13021 29.319 4.3839 29.0627 4.58911C28.8064 4.79433 28.5122 4.94706 28.1969 5.03858C27.8816 5.1301 27.5513 5.15861 27.225 5.1225C23.1051 4.66161 18.9438 5.49235 15.3167 7.49981C11.6896 9.50727 8.77589 12.5922 6.97867 16.328C5.18144 20.0638 4.58951 24.2657 5.28473 28.3526C5.97995 32.4394 7.92798 36.2093 10.8593 39.1406C13.7907 42.072 17.5606 44.0201 21.6474 44.7153C25.7343 45.4105 29.9362 44.8186 33.672 43.0213C37.4078 41.2241 40.4927 38.3104 42.5002 34.6833C44.5076 31.0562 45.3384 26.8949 44.8775 22.775C44.8414 22.4487 44.8699 22.1184 44.9614 21.8031C45.0529 21.4878 45.2057 21.1936 45.4109 20.9373C45.8253 20.4197 46.4284 20.0879 47.0875 20.015C47.7466 19.9421 48.4076 20.1339 48.9252 20.5484C49.1815 20.7536 49.3949 21.0073 49.5531 21.295C49.7113 21.5826 49.8114 21.8987 49.8475 22.225C49.9475 23.1367 49.9983 24.0617 50 25C50 38.8075 38.8075 50 25 50C11.1925 50 0 38.8075 0 25C0 11.1925 11.1925 0 25 0ZM24.92 14.6925C25.0848 15.3343 24.988 16.0153 24.6509 16.5858C24.3139 17.1563 23.7641 17.5696 23.1225 17.735C21.3597 18.1968 19.8251 19.2842 18.8051 20.7943C17.7851 22.3044 17.3494 24.134 17.5793 25.9417C17.8091 27.7495 18.6889 29.4118 20.0543 30.6186C21.4198 31.8254 23.1777 32.4941 25 32.5C26.6633 32.5007 28.2796 31.9485 29.5947 30.9302C30.9098 29.912 31.8492 28.4854 32.265 26.875C32.4422 26.2459 32.8587 25.7112 33.4254 25.3854C33.992 25.0597 34.6637 24.9688 35.2965 25.1322C35.9293 25.2957 36.473 25.7004 36.811 26.2598C37.1491 26.8192 37.2546 27.4888 37.105 28.125C36.3381 31.0648 34.5271 33.6249 32.0104 35.3269C29.4937 37.029 26.4434 37.7566 23.4294 37.3738C20.4154 36.991 17.6438 35.524 15.6325 33.2468C13.6212 30.9697 12.5077 28.0382 12.5 25C12.4996 22.2285 13.4203 19.5354 15.1173 17.3442C16.8143 15.153 19.1915 13.5879 21.875 12.895C22.193 12.813 22.524 12.7945 22.8491 12.8405C23.1742 12.8865 23.4871 12.9961 23.7698 13.163C24.0526 13.3299 24.2997 13.5509 24.4971 13.8133C24.6944 14.0758 24.8381 14.3745 24.92 14.6925ZM41.26 0.3175C41.7163 0.506698 42.1064 0.826843 42.3809 1.23752C42.6554 1.6482 42.8021 2.13101 42.8025 2.625V7.2H47.375C47.8694 7.20011 48.3526 7.34679 48.7636 7.6215C49.1747 7.89621 49.495 8.28661 49.6842 8.74336C49.8734 9.20011 49.9229 9.7027 49.8265 10.1876C49.73 10.6725 49.492 11.1179 49.1425 11.4675L40.3 20.3C39.8313 20.7689 39.1955 21.0324 38.5325 21.0325H32.5L27.93 25.605C27.4609 26.0741 26.8247 26.3376 26.1613 26.3376C25.4978 26.3376 24.8616 26.0741 24.3925 25.605C23.9234 25.1359 23.6599 24.4997 23.6599 23.8363C23.6599 23.1728 23.9234 22.5366 24.3925 22.0675L28.965 17.5V11.465C28.9651 10.802 29.2286 10.1662 29.6975 9.6975L38.535 0.8575C38.8846 0.507668 39.3301 0.269396 39.8152 0.172828C40.3003 0.076261 40.8031 0.125738 41.26 0.315M37.8025 8.6575L33.965 12.5V16.035H37.5L41.34 12.1975H40.3025C39.6395 12.1975 39.0036 11.9341 38.5347 11.4653C38.0659 10.9964 37.8025 10.3605 37.8025 9.6975V8.6575Z" fill="#FF3B00"/></svg>
+;
+const IconModeloNegocio = () => <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M9.5 37L22 29.5M32 24.5L44.5 17M27 9.5V22M27 32V44.5M9.5 17L22 24.5M32 29.5L44.5 37M48.25 19.5V33.25M30.75 48.25L44.5 40.75M8.25 40.75L23.25 48.25M5.75 34.5V19.5M8.25 13.25L23.25 5.75M45.75 13.25L30.75 5.75" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M27 9.5C29.0711 9.5 30.75 7.82107 30.75 5.75C30.75 3.67893 29.0711 2 27 2C24.9289 2 23.25 3.67893 23.25 5.75C23.25 7.82107 24.9289 9.5 27 9.5Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M27 52C29.0711 52 30.75 50.3211 30.75 48.25C30.75 46.1789 29.0711 44.5 27 44.5C24.9289 44.5 23.25 46.1789 23.25 48.25C23.25 50.3211 24.9289 52 27 52Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M5.75 19.5C7.82107 19.5 9.5 17.8211 9.5 15.75C9.5 13.6789 7.82107 12 5.75 12C3.67893 12 2 13.6789 2 15.75C2 17.8211 3.67893 19.5 5.75 19.5Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M48.25 19.5C50.3211 19.5 52 17.8211 52 15.75C52 13.6789 50.3211 12 48.25 12C46.1789 12 44.5 13.6789 44.5 15.75C44.5 17.8211 46.1789 19.5 48.25 19.5Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M48.25 42C50.3211 42 52 40.3211 52 38.25C52 36.1789 50.3211 34.5 48.25 34.5C46.1789 34.5 44.5 36.1789 44.5 38.25C44.5 40.3211 46.1789 42 48.25 42Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M5.75 42C7.82107 42 9.5 40.3211 9.5 38.25C9.5 36.1789 7.82107 34.5 5.75 34.5C3.67893 34.5 2 36.1789 2 38.25C2 40.3211 3.67893 42 5.75 42Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M27 21.375L32 24.1875V29.8125L27 32.625L22 29.8125V24.1875L27 21.375Z" stroke="#FF3B00" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
+const IconLideraIndustria = () => <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M35.3333 52H18.6667M35.3333 52V28.6654C35.3333 28.2234 35.1577 27.7994 34.8452 27.4868C34.5326 27.1743 34.1087 26.9987 33.6667 26.9987H20.3333C19.8913 26.9987 19.4674 27.1743 19.1548 27.4868C18.8423 27.7994 18.6667 28.2234 18.6667 28.6654V52M35.3333 52H50.3333C50.7754 52 51.1993 51.8244 51.5118 51.5118C51.8244 51.1992 52 50.7753 52 50.3332V43.944C52 43.502 51.8244 43.078 51.5118 42.7654C51.1993 42.4529 50.7754 42.2773 50.3333 42.2773H37C36.558 42.2773 36.134 42.4529 35.8215 42.7654C35.5089 43.078 35.3333 43.502 35.3333 43.944V52ZM18.6667 52V38.3882C18.6667 37.9461 18.4911 37.5222 18.1785 37.2096C17.866 36.897 17.442 36.7214 17 36.7214H3.66667C3.22464 36.7214 2.80072 36.897 2.48816 37.2096C2.17559 37.5222 2 37.9461 2 38.3882V50.3332C2 50.7753 2.17559 51.1992 2.48816 51.5118C2.80072 51.8244 3.22464 52 3.66667 52H18.6667ZM23.6833 7.86709L26.2083 2.51403C26.2765 2.361 26.3876 2.231 26.5281 2.13978C26.6686 2.04855 26.8325 2 27 2C27.1675 2 27.3314 2.04855 27.4719 2.13978C27.6124 2.231 27.7235 2.361 27.7917 2.51403L30.3194 7.86709L35.9639 8.73102C36.6889 8.84214 36.9778 9.77553 36.4528 10.3089L32.3694 14.4758L33.3333 20.3594C33.4556 21.115 32.7 21.6928 32.05 21.3345L27 18.5566L21.95 21.3345C21.3028 21.6901 20.5444 21.115 20.6667 20.3594L21.6306 14.4758L17.5472 10.3089C17.0194 9.77553 17.3111 8.84214 18.0333 8.73102L23.6833 7.86709Z" stroke="#FF3B00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
+const IconEquipo = () => <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25 22.5C28.3152 22.5 31.4946 23.817 33.8388 26.1612C36.183 28.5054 37.5 31.6848 37.5 35V50H32.5V35C32.5001 33.087 31.7692 31.2462 30.4568 29.8543C29.1444 28.4625 27.3497 27.6247 25.44 27.5125L25 27.5C23.087 27.4999 21.2462 28.2308 19.8543 29.5432C18.4625 30.8556 17.6247 32.6503 17.5125 34.56L17.5 35V50H12.5V35C12.5 31.6848 13.817 28.5054 16.1612 26.1612C18.5054 23.817 21.6848 22.5 25 22.5ZM8.75 30C9.45 30.0017 10.125 30.08 10.775 30.235C10.3491 31.5079 10.096 32.8322 10.0225 34.1725L10 35V35.215C9.71258 35.1124 9.4137 35.0452 9.11 35.015L8.75 35C7.81818 35 6.91974 35.3469 6.22973 35.9731C5.53972 36.5993 5.10758 37.46 5.0175 38.3875L5 38.75V50H0V38.75C0 36.4294 0.921872 34.2038 2.56282 32.5628C4.20376 30.9219 6.42936 30 8.75 30ZM41.25 30C43.5706 30 45.7962 30.9219 47.4372 32.5628C49.0781 34.2038 50 36.4294 50 38.75V50H45V38.75C45 37.8182 44.6531 36.9197 44.0269 36.2297C43.4007 35.5397 42.54 35.1076 41.6125 35.0175L41.25 35C40.81 35.0017 40.3933 35.0725 40 35.2125V35C40 33.335 39.73 31.735 39.23 30.24C39.875 30.0825 40.555 30 41.25 30ZM8.75 15C10.4076 15 11.9973 15.6585 13.1694 16.8306C14.3415 18.0027 15 19.5924 15 21.25C15 22.9076 14.3415 24.4973 13.1694 25.6694C11.9973 26.8415 10.4076 27.5 8.75 27.5C7.0924 27.5 5.50269 26.8415 4.33058 25.6694C3.15848 24.4973 2.5 22.9076 2.5 21.25C2.5 19.5924 3.15848 18.0027 4.33058 16.8306C5.50269 15.6585 7.0924 15 8.75 15ZM41.25 15C42.9076 15 44.4973 15.6585 45.6694 16.8306C46.8415 18.0027 47.5 19.5924 47.5 21.25C47.5 22.9076 46.8415 24.4973 45.6694 25.6694C44.4973 26.8415 42.9076 27.5 41.25 27.5C39.5924 27.5 38.0027 26.8415 36.8306 25.6694C35.6585 24.4973 35 22.9076 35 21.25C35 19.5924 35.6585 18.0027 36.8306 16.8306C38.0027 15.6585 39.5924 15 41.25 15ZM8.75 20C8.41848 20 8.10054 20.1317 7.86612 20.3661C7.6317 20.6005 7.5 20.9185 7.5 21.25C7.5 21.5815 7.6317 21.8995 7.86612 22.1339C8.10054 22.3683 8.41848 22.5 8.75 22.5C9.08152 22.5 9.39946 22.3683 9.63388 22.1339C9.8683 21.8995 10 21.5815 10 21.25C10 20.9185 9.8683 20.6005 9.63388 20.3661C9.39946 20.1317 9.08152 20 8.75 20ZM41.25 20C40.9185 20 40.6005 20.1317 40.3661 20.3661C40.1317 20.6005 40 20.9185 40 21.25C40 21.5815 40.1317 21.8995 40.3661 22.1339C40.6005 22.3683 40.9185 22.5 41.25 22.5C41.5815 22.5 41.8995 22.3683 42.1339 22.1339C42.3683 21.8995 42.5 21.5815 42.5 21.25C42.5 20.9185 42.3683 20.6005 42.1339 20.3661C41.8995 20.1317 41.5815 20 41.25 20ZM25 0C27.6522 0 30.1957 1.05357 32.0711 2.92893C33.9464 4.8043 35 7.34784 35 10C35 12.6522 33.9464 15.1957 32.0711 17.0711C30.1957 18.9464 27.6522 20 25 20C22.3478 20 19.8043 18.9464 17.9289 17.0711C16.0536 15.1957 15 12.6522 15 10C15 7.34784 16.0536 4.8043 17.9289 2.92893C19.8043 1.05357 22.3478 0 25 0ZM25 5C23.6739 5 22.4021 5.52678 21.4645 6.46447C20.5268 7.40215 20 8.67392 20 10C20 11.3261 20.5268 12.5979 21.4645 13.5355C22.4021 14.4732 23.6739 15 25 15C26.3261 15 27.5979 14.4732 28.5355 13.5355C29.4732 12.5979 30 11.3261 30 10C30 8.67392 29.4732 7.40215 28.5355 6.46447C27.5979 5.52678 26.3261 5 25 5Z" fill="#FF3B00"/></svg>;
+
+// --- DATOS CENTRALIZADOS ---
+const methodologySteps = [
+  { id: 1, title: 'Videollamada Diagnóstico Inicial Gratis', text: 'Descubre las oportunidades que tu negocio está perdiendo en el mundo digital. En esta videollamada gratuita, analizamos tu situación actual, identificamos puntos de mejora y te mostramos cómo puedes duplicar tus ventas en menos de un año.' },
+  { id: 2, title: 'Kickoff Estudio de Mercado y Plan Estrategia 3 meses', text: 'Conocemos tu negocio, tus clientes y tu competencia. Creamos un plan estratégico de marketing 360º adaptado a tus metas, cubriendo desde SEO y redes sociales hasta automatización de ventas y campañas pagadas. Sin suposiciones, solo estrategia basada en datos.' },
+  { id: 3, title: 'Ejecución Plan de Ventas', text: 'Nuestro equipo implementa tu plan 360º: campañas de ads, contenido en redes, email marketing, automatización de ventas y más. Tú solo ves cómo las ventas crecen. Nos convertimos en tu departamento digital.' },
+  { id: 4, title: 'Optimización y Mejoras Continuas', text: 'Medimos cada acción y ajustamos en tiempo real para maximizar tu retorno. Probamos nuevas estrategias, mejoramos mensajes y enfocamos presupuesto en lo que funciona. Lo que hoy es bueno, mañana será mejor.' },
+  { id: 5, title: 'Éxito', text: 'Duplicamos tus ventas, escalamos tu presencia online y te convertimos en líder digital. Lo mejor: si no cumplimos tus objetivos, seguimos trabajando sin costo hasta lograrlos. Tu éxito es nuestro éxito.' },
+];
+const expectedResults = [
+  { id: 'res1', icon: <IconAlcanzarMeta />, caption: 'Duplicar ventas en < 12 meses'},
+  { id: 'res2', icon: <IconModeloNegocio />, caption: 'Modelo de negocio digital sólido y escalable' },
+  { id: 'res3', icon: <IconLideraIndustria />, caption: 'Liderar tu industria en canales digitales' },
+  { id: 'res4', icon: <IconEquipo />, caption: 'Equipo experto acompañándote' },
+];
+
+function Servicios360Component() {
+  return (
+    <>
+      {/* --- HERO SECTION --- */}
+      <section className={styles.heroSection}>
+        <img src={heroBg} alt="" className={styles.heroBackground} />
+        <div className={styles.heroOverlay}></div>
+        <h1>
+          Tu Evolución Digital 360º <br />Transformamos tu negocio para triunfar en línea
+        </h1>
+        <br />
+        <p>Plan exclusivo para grandes empresas: duplicamos tus ventas online en 12 meses</p>
+        <Link to="/contacto" className={styles.ctaButton}>Solicita Diagnóstico 360° Gratis</Link>
+      </section>
+
+      {/* --- PLAN SECTION --- */}
+      <section className={styles.planSection}>
+          <div className={styles.planContainer}>
+              <article>
+                  <h2>¿Para quién es este plan?</h2>
+                  <p>Si tu empresa destaca offline pero buscas replicar ese éxito en línea… este plan es para ti.</p>
+              </article>
+              <article>
+                  <h2>¿Qué Incluye “Tu Evolución Digital 360º”?</h2>
+                  <p>Estudio de mercado, estrategia SEO, e-commerce, redes sociales, publicidad, rebranding, pricing, logística ¡y más! Implementado de principio a fin por expertos.</p>
+              </article>
+          </div>
+      </section>
+
+      {/* --- METODOLOGÍA SECTION --- */}
+      <section className={styles.methodologySection}>
+        <div className={styles.methodologyContainer}>
+          <h2 className={styles.sectionTitle}>Metodología en Etapas</h2>
+          <ol className={styles.methodologyList}>
+            {methodologySteps.map(step => (
+              <li key={step.id} className={styles.stepItem}>
+                <span className={styles.stepNumber}>{step.id}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* --- RESULTADOS SECTION --- */}
+      <section className={styles.resultsSection}>
+          <div className={styles.methodologyContainer}>
+              <h2 className={styles.sectionTitle}>Resultados Esperados</h2>
+              <div className={styles.resultsGrid}>
+                  {expectedResults.map(result => (
+                      <figure key={result.id} className={styles.resultItem}>
+                          {result.icon}
+                          <figcaption>{result.caption}</figcaption>
+                      </figure>
+                  ))}
+              </div>
+          </div>
+      </section>
+    </>
+  );
+}
+
+export default Servicios360Component;

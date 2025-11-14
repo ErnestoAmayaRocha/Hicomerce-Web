@@ -1,0 +1,232 @@
+/* ===== 1. Hero Section ===== */
+.heroSection {
+  position: relative;
+  text-align: center;
+  padding: 100px 5%;
+  color: var(--textoBlanco);
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.heroSection h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--textoBlanco);
+  line-height: 1.2;
+}
+
+.heroSection p {
+  font-size: 35px;
+  max-width: bold;
+  margin: 20px auto 40px auto;
+  color: #e0e0e0;
+}
+
+.ctaButton {
+  background-color: var(--naranja);
+  color: var(--textoBlanco);
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.ctaButton:hover {
+  background-color: var(--azul);
+}
+
+/* ===== 2. Plan Section ===== */
+.planSection {
+  padding: 80px 5%;
+  background-color: #02abe7;
+  text-align: center;
+}
+.planContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.planSection h2 {
+  font-size: 26px;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.planSection p {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* ===== 3. Metodología Section ===== */
+.methodologySection {
+  padding: 100px 5%;
+  background-color: #ffffff;
+}
+.methodologyContainer {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sectionTitle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: var(--textoNegro);
+}
+
+.methodologyList {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  gap: 20px;
+  overflow-x: 1px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.stepItem {
+  flex: 1 1 200px; 
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  text-align: left;
+  position: relative;
+  scroll-snap-align: start; 
+  border-top: 5px solid var(--azulCielo);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stepItem:hover {
+    transform: translateY(-5px); 
+}
+
+.stepNumber {
+  position: absolute;
+  top: -20px; 
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #02abe7;
+  color: var(--textoBlanco);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stepItem h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px; 
+  margin-bottom: 10px;
+  color: var(--textoNegro);
+}
+.stepItem p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ===== 4. Resultados Section ===== */
+.resultsSection {
+  padding: 70px 5%;
+  background-color: var(--azulCielo);
+}
+.resultsGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.resultItem {
+  text-align: center;
+}
+.resultItem svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.resultItem figcaption {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ======================================= */
+/* ===== MEDIA QUERY PARA MÓVILES ===== */
+/* ======================================= */
+@media (max-width: 981px) {
+    .ctaButton {
+        background-color: var(--naranja);
+        color: var(--textoBlanco);
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+  .heroSection h1 { font-size: 36px; }
+  .planContainer { grid-template-columns: 1fr; }
+  .resultsGrid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .sectionTitle { font-size: 28px; }
+
+  .methodologyList {
+    flex-direction: column;
+    gap: 0; 
+    border-left: 3px solid var(--azulCielo); 
+    overflow-x: 1px;
+  }
+
+  .stepItem {
+    flex: none;
+    width: auto;
+    margin-bottom: 40px; 
+    padding-left: 40px;
+    box-shadow: none; 
+    border-top: none;
+    background-color: transparent; 
+  }
+
+  .stepNumber {
+    position: absolute;
+    left: -21.5px;
+    top: 0;
+    border: 3px solid #f7f7f7; 
+    box-shadow: none;
+  }
+
+  .stepItem h3 {
+    margin-top: 0; 
+    font-size: 20px;
+  }
+}
