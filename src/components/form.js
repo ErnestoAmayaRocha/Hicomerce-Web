@@ -5,6 +5,9 @@ import googlePartnerLogo from '../../src/assets/Form/premier-partner25 1.png';
 import metaPartnerLogo from '../../src/assets/Form/meta-business-partner-seeklogo 1.webp';
 import robotImage from '../../src/assets/Hero/mascot 1.svg';
 
+// 👇 Pega aquí la URL de tu Web App de Apps Script
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxVtBop2RIa2RJTUtIDtZxbdmwNkgGXV1EgLInVEvxbUXQvwdFcPdKwmIYNgBmOiXbG/exec';
+
 function FormHC() {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +16,9 @@ function FormHC() {
     mensaje: ''
   });
 
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData(prevState => ({
@@ -20,6 +26,31 @@ function FormHC() {
       [id]: value
     }));
   };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSending(true);
+  setStatusMessage('');
+
+  try {
+    const body = new URLSearchParams(formData);
+
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body,
+      mode: 'no-cors',
+    });
+
+    setStatusMessage('✅ Gracias, hemos recibido tu información.');
+    setFormData({ name: '', email: '', asunto: '', mensaje: '' });
+  } catch (error) {
+    console.error(error);
+    setStatusMessage('❌ Error de conexión. Intenta más tarde.');
+  } finally {
+    setIsSending(false);
+  }
+};
+
 
   return (
     <section className={styles.contactSection}>
@@ -34,14 +65,9 @@ function FormHC() {
           <p>Da el siguiente paso y te daremos un plan gratuito para lograrlo.</p>
           
           <form 
-            name="contact" 
-            method="POST" 
-            data-netlify="true"
             className={styles.form}
-            netlify
+            onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
-
             <div className={styles.formGroup}>
               <label htmlFor="name">Nombre*</label>
               <input
@@ -54,6 +80,7 @@ function FormHC() {
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="email">Correo*</label>
               <input
@@ -66,6 +93,7 @@ function FormHC() {
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="asunto">Asunto*</label>
               <input
@@ -78,6 +106,7 @@ function FormHC() {
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="mensaje">Mensaje (opcional)</label>
               <textarea
@@ -89,9 +118,14 @@ function FormHC() {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className={styles.submitButton}>
-              Agenda tu Sesión Gratis
+
+            <button type="submit" className={styles.submitButton} disabled={isSending}>
+              {isSending ? 'Enviando...' : 'Agenda tu Sesión Gratis'}
             </button>
+
+            {statusMessage && (
+              <p className={styles.statusMessage}>{statusMessage}</p>
+            )}
           </form>
         </article>
         

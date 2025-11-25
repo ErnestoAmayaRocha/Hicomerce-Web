@@ -102,16 +102,16 @@ function FooterHC() {
         <div className={styles.footerColumnas}>
           <div className={styles.columnaSocial}>
              <h3>Social</h3>
-             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+             <a href="https://www.instagram.com/hicomerce/" target="_blank" rel="noopener noreferrer" title="Instagram">
                <i className="fa-brands fa-instagram" />
              </a>
-             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+             <a href="https://www.facebook.com/HiComerce?locale=es_LA" target="_blank" rel="noopener noreferrer" title="Facebook">
                <i className="fa-brands fa-facebook" />
              </a>
              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube">
                <i className="fa-brands fa-youtube" />
              </a>
-             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+             <a href="https://www.linkedin.com/company/40832129/admin/dashboard/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                <i className="fa-brands fa-linkedin" />
              </a>
           </div>
