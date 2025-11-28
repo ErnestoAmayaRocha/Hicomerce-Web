@@ -17,7 +17,7 @@ function IndexHC() {
                 <AboutusHC />
                 <Ourclients />
                 <ResultadosHC />
-                <ProyectosClientesHC />
+               {/*  <ProyectosClientesHC /> */}
                 <Satisfaccion />
                 <FormHC />
             </main>

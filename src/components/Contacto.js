@@ -5,7 +5,7 @@ import styles from "./Contacto.module.css";
 import contactoIMG from "../../src/assets/Contacto/HABLEMOS.webp"; 
 
 function ContactoComponent() { 
-    const textoHablemos = "Lörem ipsum prenera radiomodern kanedat. Dilås semihusm. Bokashi nynt i mossgraffiti keminde, homoras. Mibäsam mansskatt put. Prossade suprat de beninade läshund rev. Lörem ipsum prenera radiomodern kanedat. Dilås semihusm. Bokashi nynt i mossgraffiti keminde, homoras. Mibäsam mansskatt put. Prossade suprat de beninade läshund rev. ";
+    const textoHablemos = "Déjanos tu consulta. Un asesor se pondrá en contacto contigo lo antes posible.";
 
   return (
     <>

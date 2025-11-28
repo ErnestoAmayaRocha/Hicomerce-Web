@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react"; */
 import styles from "./PortafolioPage.module.css";
 
 import HeroIMG from "../../src/assets/Portafolio/resultados.webp"
-import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
+/* import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
 import imgBobois from '../../src/assets/Clients/ImageUNIQ.webp';
 import imgMexikandela from '../../src/assets/Partners/ShopIgartua 1.webp';
 import imgIgartua from '../../src/assets/Partners/ShopIgartua 1.webp';
 import imgMorena from '../../src/assets/Partners/ShopIgartua 1.webp';
-
-const allProjects = [
+ */
+/* const allProjects = [
   { id: 1,
     title: "Amatina",
     description: "Desarrollo de e-commerce y estrategia de marketing digital para marca de joyería.",
@@ -38,23 +38,23 @@ const allProjects = [
     image: imgMorena,
     link: "https://morenamia.com",
     category: "website" },
-];
+]; */
 
-const categories = [
+/* const categories = [
     { key: "website", name: "Websites/E-commerce" },
     { key: "ads", name: "Ads Campaigns" },
     { key: "social", name: "Social Media" },
     { key: "marketplace", name: "Marketplace" },
     { key: "all", name: "Todos" }
 ];
-
+ */
 function PortafolioComponent() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  /* const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredProjects = activeFilter === "all"
     ? allProjects
     : allProjects.filter(project => project.category === activeFilter);
-
+ */
   return (
     <>
       <section className={styles.heroSection}>
@@ -68,7 +68,7 @@ function PortafolioComponent() {
           </p>
         </div>
       </section>
-      <section className={styles.headerSection}>
+    {/*   <section className={styles.headerSection}>
         <nav className={styles.filterNav}>
           {categories.map(category => (
             <button
@@ -104,7 +104,7 @@ function PortafolioComponent() {
               <p>No hay proyectos en esta categoría por el momento.</p>
           )}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

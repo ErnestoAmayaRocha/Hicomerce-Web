@@ -10,7 +10,7 @@ import Portafolio from './pages/HC-Portafolio';
 import PageNotFound from './pages/PageNotFound';
 import ClientesHC from './pages/HC-Clientes';
 import NosotrosHC from './pages/HC-Nosotros';
-
+import AvisoPr from './pages/HC-AvisoPrivacidad';
 /* Componentes */
 import Layout from './components/Layout';
 
@@ -19,26 +19,26 @@ import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
-      <Router>
-        <ScrollToTop />
+    <Router>
+      <ScrollToTop />
 
-        <Routes>
+      <Routes>
 
-          <Route path='/' element={<Layout/>}>
-            <Route index element={<IndexHC />}/>
-            <Route path='clientes' element={<ClientesHC />}/>
-            <Route path='contacto' element={<Contacto/>} />
-            <Route path='nosotros' element={<NosotrosHC />}/>
-            <Route path='servicios360' element={< Servicios360/>}/>
-            <Route path='serviciosIA' element={<ServiciosIA />}/>
-            <Route path='portafolio' element={< Portafolio/>}/>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<IndexHC />} />
+          <Route path='clientes' element={<ClientesHC />} />
+          <Route path='contacto' element={<Contacto />} />
+          <Route path='nosotros' element={<NosotrosHC />} />
+          <Route path='servicios360' element={< Servicios360 />} />
+          <Route path='serviciosIA' element={<ServiciosIA />} />
+          <Route path='portafolio' element={< Portafolio />} />
+          <Route path='aviso-de-privacidad' element={< AvisoPr />} />
+          <Route path='*' element={<PageNotFound />} />
+        </Route>
 
-            <Route path='*' element={<PageNotFound />}/>
-          </Route>
-          
-        </Routes>
+      </Routes>
 
-      </Router>
+    </Router>
   )
 }
 

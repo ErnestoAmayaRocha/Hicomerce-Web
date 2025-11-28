@@ -1,31 +1,56 @@
 import React, { useState, useRef } from "react";
 import styles from './Ourclients.module.css';
 
-import cliente1 from '../../src/assets/Clients/Image.webp'; 
-import cliente2 from '../../src/assets/Clients/ImageUNIQ.webp';
-import cliente3 from '../../src/assets/Clients/ImageUNIQ.webp';
+import cliente1 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp'; 
+import cliente2 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
+import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromostaza.webp';
+import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
+import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';
+import cliente6 from '../../src/assets/Clients/logos_clientes_web_220_xilin.webp';
+
 
 const testimonialsData = [
   {
     id: 1,
-    text: "Gracias a Hicomerce nuestra demanda se disparó. En 3 meses triplicamos la generación de leads mientras reducíamos costes de ads. ¡Una verdadera revolución!",
-    author: "María López",
-    role: "Directora de Marketing, XYZ Corp.",
+    text: "La atención que se tiene, además de la resolución que se brinda ante los problemas de la cuenta y sus recomendaciones",
+    author: "Guillermo E",
+    role: "Boca Blanca",
     image: cliente1
   },
   {
     id: 2,
-    text: "Con la IA de Hicomerce, creamos 20 posts semanales sin ampliar nuestro equipo, manteniendo la calidad de marca. Los resultados hablan por sí solos: +80% engagement en redes.",
-    author: "Martín García",
-    role: "CEO, Startup Innovadora",
+    text: "La respuesta de atención es inmediata, el nivel de profesionalismo de todo el equipo igual, me da mucho gusto y paz trabajar con una agencia como Hicommerce",
+    author: "Monserrat Palomera",
+    role: "Cklass",
     image: cliente2
   },
   {
     id: 3,
-    text: "El equipo de Hicomerce no solo entrega resultados, sino que se convierten en verdaderos socios estratégicos. Su enfoque 360 cambió nuestro negocio.",
-    author: "Ana Jiménez",
-    role: "Gerente de E-commerce, Tienda Líder",
+    text: "Es una buena empresa, sus propósitos son claros y se ven reflejados en los resultados.",
+    author: "Tania Cervantes",
+    role: "Cliente",
     image: cliente3
+  },
+  {
+    id: 4,
+    text: "Profesionalidad y seguimiento a los proyectos.",
+    author: "Roberto Lozano",
+    role: "Cliente",
+    image: cliente4
+  },
+  {
+    id: 5,
+    text: "Trabajar con Hicommerce es tener un equipo de especialistas en cada área, existe acompañamiento y mejora continua, resultados tangibles.",
+    author: "Rocio Estrada",
+    role: "Cliente",
+    image: cliente5
+  },
+  {
+    id: 6,
+    text: "Todo excelente, solo siento que falta un poco más de creatividad en la parte de diseño gráfico. A veces las propuestas de cambios gráficos les falta un extra de creatividad para MKT. El resto de los servicios son excelentes.",
+    author: "Mónica Mendoza",
+    role: "Cliente",
+    image: cliente6
   }
 ];
 

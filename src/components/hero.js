@@ -6,18 +6,28 @@ import heroRobotImg from '../../src/assets/Hero/mascot 1.svg';
 import heroWorldImg from '../../src/assets/Hero/globe 1.svg';
 import heroParticlesImg from '../../src/assets/Hero/points 2.svg';
 
-import amatinaLogo from '../../src/assets/Partners/Amatina 1.webp';
-import boboisLogo from '../../src/assets/Partners/Bobois 2.webp';
-import mexikandelaLogo from '../../src/assets/Partners/Mexikandela 1.webp';
-import igartuaLogo from '../../src/assets/Partners/MorennaMia 1.webp';
-import morenaMiaLogo from '../../src/assets/Partners/ShopIgartua 1.webp';
+
+
+
+
+
+
+import cliente1 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
+import cliente2 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
+import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromostaza.webp';
+import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
+import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';
+import cliente6 from '../../src/assets/Clients/logos_clientes_web_220_xilin.webp';
+
+
 
 const partnersLogos = [
-  { id: 1, src: amatinaLogo, alt: "Logo de Amatina" },
-  { id: 2, src: boboisLogo, alt: "Logo de Bobois Collection" },
-  { id: 3, src: mexikandelaLogo, alt: "Logo de Mexikandela" },
-  { id: 4, src: igartuaLogo, alt: "Logo de Shop Igartua" },
-  { id: 5, src: morenaMiaLogo, alt: "Logo de Morena Mia" },
+  { id: 1, src: cliente1, alt: "Logo de Amatina" },
+  { id: 2, src: cliente2, alt: "Logo de Bobois Collection" },
+  { id: 3, src: cliente3, alt: "Logo de Mexikandela" },
+  { id: 4, src: cliente4, alt: "Logo de Shop Igartua" },
+  { id: 5, src: cliente5, alt: "Logo de Morena Mia" },
+  { id: 5, src: cliente6, alt: "Logo de Morena Mia" },
 ];
 
 function Hero() {
