@@ -49,11 +49,11 @@ const Logo = () => (
     <path d="M16.8622 1.40069V14.6304H35.7091V1.43006C32.6981 1.55432 29.669 1.61983 26.6285 1.61983C23.3565 1.61983 20.1003 1.54302 16.8622 1.40069Z" fill="#FF3B00"/>
   </svg>
 );
-const SearchIcon = () => (
+/* const SearchIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
     <path fillRule="evenodd" clipRule="evenodd" d="M8 4.03053C5.79086 4.03053 4 5.83506 4 8.06106C4 10.2871 5.79086 12.0916 8 12.0916C10.2091 12.0916 12 10.2871 12 8.06106C12 5.83506 10.2091 4.03053 8 4.03053ZM2 8.06106C2 4.72206 4.68629 2.01527 8 2.01527C11.3137 2.01527 14 4.72206 14 8.06106C14 9.36678 13.5892 10.5758 12.8907 11.5641L17.7071 16.4173C18.0976 16.8108 18.0976 17.4488 17.7071 17.8423C17.3166 18.2358 16.6834 18.2358 16.2929 17.8423L11.4765 12.9891C10.4957 13.6929 9.29583 14.1069 8 14.1069C4.68629 14.1069 2 11.4001 2 8.06106Z" fill="#FF3B00"/>
   </svg>
-);
+); */
 
 
 function HeaderHC() {
@@ -133,9 +133,9 @@ function HeaderHC() {
       </nav>
 
       <div className={styles.acciones}>
-        <button className={styles.searchBtn} aria-label="Buscar">
+       {/*  <button className={styles.searchBtn} aria-label="Buscar">
           <SearchIcon />
-        </button>
+        </button> */}
         <Link to="/contacto" className={styles.btnAsesoria}>
           Quiero Asesoría
         </Link>
