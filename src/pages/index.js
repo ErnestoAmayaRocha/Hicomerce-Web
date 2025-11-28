@@ -7,7 +7,7 @@ import Satisfaccion from "../components/garantiaClientes";
 import FormHC from "../components/form";
 import HeroHC from "../components/hero";
 import AboutusHC from "../components/beneficios";
-import ProyectosClientesHC from '../components/proyectosCliente'
+/* import ProyectosClientesHC from '../components/proyectosCliente' */
 
 function IndexHC() {
     return (
