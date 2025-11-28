@@ -11,6 +11,7 @@ import PageNotFound from './pages/PageNotFound';
 import ClientesHC from './pages/HC-Clientes';
 import NosotrosHC from './pages/HC-Nosotros';
 import AvisoPr from './pages/HC-AvisoPrivacidad';
+import TerminosServicio from './pages/HC-TerminosyCondiciones';
 /* Componentes */
 import Layout from './components/Layout';
 
@@ -33,6 +34,8 @@ function App() {
           <Route path='serviciosIA' element={<ServiciosIA />} />
           <Route path='portafolio' element={< Portafolio />} />
           <Route path='aviso-de-privacidad' element={< AvisoPr />} />
+          <Route path='terminos-del-servicio' element={< TerminosServicio />} />
+
           <Route path='*' element={<PageNotFound />} />
         </Route>
 
