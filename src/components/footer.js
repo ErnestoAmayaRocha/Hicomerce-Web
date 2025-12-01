@@ -115,11 +115,11 @@ function FooterHC() {
                <i className="fa-brands fa-linkedin" />
              </a>
           </div>
-          <h3 style={{marginTop: '20px'}}>Newsletter</h3>
-          <form className={styles.newsletterForm}>
+         {/*  <h3 style={{marginTop: '20px'}}>Newsletter</h3> */}
+         {/*  <form className={styles.newsletterForm}>
             <input id="newsletter-email" type="email" name="email" placeholder="Correo" required />
             <button type="submit">Suscribirse</button>
-          </form>
+          </form> */}
         </div>
 
         {/* --- Columna 5: Logo --- */}
