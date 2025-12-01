@@ -92,7 +92,7 @@ function FooterHC() {
               </li>
               <li>
                 <i className="fa-brands fa-whatsapp" aria-hidden="true" />
-                <a href="tel:+1234567890">Más información</a>
+                <a href="tel:+523316913370">Más información</a>
               </li>
             </ul>
           </details>
