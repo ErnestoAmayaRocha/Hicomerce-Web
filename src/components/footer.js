@@ -88,7 +88,7 @@ function FooterHC() {
             <ul>
               <li>
                 <i className="fa-solid fa-envelope" aria-hidden="true" />
-                <a href="mailto:hicomer@gmail.com">Contáctanos</a>
+                <a href="mailto:ventas@hicomerce.com">Contáctanos</a>
               </li>
               <li>
                 <i className="fa-brands fa-whatsapp" aria-hidden="true" />
