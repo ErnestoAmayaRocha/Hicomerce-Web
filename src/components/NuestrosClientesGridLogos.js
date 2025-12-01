@@ -11,7 +11,7 @@ import QuintalLogo from "../assets/Clients/logos_clientes_web_220_quintal.webp";
 import RBLogo from "../assets/Clients/logos_clientes_web_220_roue bikes.webp";
 import RMLogo from "../assets/Clients/logos_clientes_web_220_roue motos.webp";
 import XILLogo from "../assets/Clients/logos_clientes_web_220_xilin.webp";
-
+import cklassLogo from "../assets/Clients/cklass.png";
 
 
 
@@ -33,6 +33,7 @@ const clientes = [
   { name: "RB", src: RBLogo },
   { name: "RM", src: RMLogo },
   { name: "XIL", src: XILLogo },
+  { name: "Cklass", src: cklassLogo },
   
 
 

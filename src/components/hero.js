@@ -13,7 +13,7 @@ import heroParticlesImg from '../../src/assets/Hero/points 2.svg';
 
 
 import cliente1 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
-import cliente2 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
+import cliente2 from '../../src/assets/Clients/cklass.png';
 import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromostaza.webp';
 import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
 import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';

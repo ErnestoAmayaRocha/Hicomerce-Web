@@ -2,13 +2,13 @@ import React, { useState, useRef } from "react";
 import styles from './Ourclients.module.css';
 
 import cliente1 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp'; 
-import cliente2 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp';
+import cliente2 from '../../src/assets/Clients/cklass.png';
 import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromostaza.webp';
 import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
 import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';
 import cliente6 from '../../src/assets/Clients/logos_clientes_web_220_xilin.webp';
 
-
+ 
 const testimonialsData = [
   {
     id: 1,
