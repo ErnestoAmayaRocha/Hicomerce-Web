@@ -74,7 +74,7 @@ const handleSubmit = async (e) => {
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Manuel Rubio"
+                placeholder="Nombre Completo"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="manuel@gmail.com"
+                placeholder="mail@mail.com"
                 required
                 value={formData.email}
                 onChange={handleChange}
