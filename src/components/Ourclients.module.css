@@ -68,7 +68,7 @@
   
   object-fit: cover;
   margin-bottom: 20px;
- 
+ filter: invert(1);
   
 }
 
