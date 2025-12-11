@@ -7,6 +7,7 @@ import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromosta
 import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
 import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';
 import cliente6 from '../../src/assets/Clients/logos_clientes_web_220_xilin.webp';
+import cliente7 from '../../src/assets/Clients/logos_clientes_web_220_roue motos.webp';
 
  
 const testimonialsData = [
@@ -51,6 +52,13 @@ const testimonialsData = [
     author: "Mónica Mendoza",
     role: "Cliente",
     image: cliente6
+  },
+  {
+    id: 7,
+    text: "Mi calificación es un 10 porque veo en ustedes un equipo muy sólido que sabe perfectamente lo que hace y se involucra más de lo que les corresponde. ",
+    author: "Santiago Gónzalez Gómez",
+    role: "Roue Motos",
+    image: cliente7
   }
 ];
 
