@@ -63,12 +63,12 @@
 }
 
 .clientPhoto {
-  width: auto;
-  height: auto;
+  width: 250px;
+  height: 130px;
   
-  object-fit: cover;
+  
   margin-bottom: 20px;
- filter: invert(1);
+
   
 }
 

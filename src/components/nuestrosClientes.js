@@ -1,13 +1,13 @@
 import React, { useState, useRef } from "react";
 import styles from './Ourclients.module.css';
 
-import cliente1 from '../../src/assets/Clients/logos_clientes_web_220_bocablanca.webp'; 
-import cliente2 from '../../src/assets/Clients/cklass.png';
-import cliente3 from '../../src/assets/Clients/logos_clientes_web_220_negromostaza.webp';
-import cliente4 from '../../src/assets/Clients/logos_clientes_web_220_deyac.webp';
-import cliente5 from '../../src/assets/Clients/logos_clientes_web_220_roue bikes.webp';
-import cliente6 from '../../src/assets/Clients/logos_clientes_web_220_xilin.webp';
-import cliente7 from '../../src/assets/Clients/logos_clientes_web_220_roue motos.webp';
+import cliente1 from '../../src/assets/Clients/logosblack/bocablanca.png'; 
+import cliente2 from '../../src/assets/Clients/logon/cklass.webp';
+import cliente3 from '../../src/assets/Clients/logosblack/negromostaza.png';
+import cliente4 from '../../src/assets/Clients/logosblack/deyac_.png';
+import cliente5 from '../../src/assets/Clients/logosblack/rouebikes.png';
+import cliente6 from '../../src/assets/Clients/logosblack/xilin.png';
+import cliente7 from '../../src/assets/Clients/logosblack/roue motos.png';
 
  
 const testimonialsData = [
@@ -18,13 +18,13 @@ const testimonialsData = [
     role: "Boca Blanca",
     image: cliente1
   },
-  {
+ /*  {
     id: 2,
     text: "La respuesta de atención es inmediata, el nivel de profesionalismo de todo el equipo igual, me da mucho gusto y paz trabajar con una agencia como Hicommerce",
     author: "Monserrat Palomera",
     role: "Cklass",
     image: cliente2
-  },
+  }, */
   {
     id: 3,
     text: "Es una buena empresa, sus propósitos son claros y se ven reflejados en los resultados.",

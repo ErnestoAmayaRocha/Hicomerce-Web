@@ -12,7 +12,7 @@ const guarantees = [
     id: 1,
     icon: <IconStar />,
     title: "Garantía 100% de Satisfacción",
-    text: "Si en 30 días no ves el valor, te devolvemos tu inversión."
+    text: "Si en 30 días no estas encantado con nuestro servicios te regresamos tu dinero"
   },
   {
     id: 2,

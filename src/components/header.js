@@ -125,7 +125,7 @@ function HeaderHC() {
             </details>
           </li>
           
-          <li onClick={closeAllMenus}><NavLink to="/portafolio">Portafolio</NavLink></li>
+        {/*   <li onClick={closeAllMenus}><NavLink to="/portafolio">Portafolio</NavLink></li> */}
           <li onClick={closeAllMenus}><NavLink to="/clientes">Clientes</NavLink></li>
           <li onClick={closeAllMenus}><NavLink to="/nosotros">Nosotros</NavLink></li>
           <li onClick={closeAllMenus}><NavLink to="/contacto">Contacto</NavLink></li>
