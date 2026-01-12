@@ -153,3 +153,200 @@
     grid-template-columns: 1fr; 
   }
 }
+
+/* ====== Videos Section ====== */
+.videosSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 20px;
+}
+
+.videosHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.videosTitle {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+   font-weight: 800;
+  text-align: center;
+  color: var(--textoNegro);
+  
+}
+
+.videosSubtitle {
+  margin: 0 auto;
+  max-width: 720px;
+  opacity: 0.85;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.videosGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.videoCard {
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Wrapper responsive 16:9 */
+.videoFrame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+ 
+}
+
+.videoFrame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.videoMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 16px 14px;
+}
+
+.videoName {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.2;
+  opacity: 0.95;
+}
+
+.videoLink {
+  font-size: 0.92rem;
+  text-decoration: none;
+  opacity: 0.9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 2px;
+  transition: opacity 180ms ease, border-color 180ms ease;
+}
+
+.videoLink:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .videosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .videosSection {
+    padding: 54px 16px;
+  }
+
+  .videosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .videoMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ====== Banners Section ====== */
+.bannersSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 54px 20px 80px;
+}
+
+.bannersHeader {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.bannersTitle {
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  font-weight: 800;
+  text-align: center;
+  color: var(--textoNegro);
+  margin-bottom: 60px;
+  margin: 0 0 10px 0;
+}
+
+.bannersSubtitle {
+  margin: 0 auto;
+  max-width: 760px;
+  opacity: 0.85;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bannersGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 por fila (se ven grandes) */
+  gap: 18px;
+}
+
+.bannerCard {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.bannerCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Mantiene ratio 1928x500 (~3.856:1) */
+.bannerFrame {
+  width: 100%;
+  aspect-ratio: 1928 / 500;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bannerFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena sin deformar */
+  display: block;
+}
+
+/* Si quieres 2 banners por fila en pantallas MUY grandes */
+@media (min-width: 1280px) {
+  .bannersGrid {
+    grid-template-columns: 1fr; /* déjalo en 1 si los quieres enormes */
+  }
+}
+
+@media (max-width: 640px) {
+  .bannersSection {
+    padding: 44px 16px 64px;
+  }
+}
+

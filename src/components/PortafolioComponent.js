@@ -1,5 +1,11 @@
 /* import React, { useState } from "react"; */
 import styles from "./PortafolioPage.module.css";
+import Banner1 from "../../src/assets/Portafolio/1-CKLASS.png";
+import Banner2 from "../../src/assets/Portafolio/2-ESTILO ROJO.png";
+import Banner3 from "../../src/assets/Portafolio/3-NM.png";
+import Banner4 from "../../src/assets/Portafolio/4-SHOP-NM.png";
+import Banner5 from "../../src/assets/Portafolio/5-UNIQ.png";
+import Banner6 from "../../src/assets/Portafolio/6-UNIQ-MELI.png";
 
 import HeroIMG from "../../src/assets/Portafolio/resultados.webp"
 /* import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
@@ -41,6 +47,7 @@ import imgMorena from '../../src/assets/Partners/ShopIgartua 1.webp';
 ]; */
 
 /* const categories = [
+
     { key: "website", name: "Websites/E-commerce" },
     { key: "ads", name: "Ads Campaigns" },
     { key: "social", name: "Social Media" },
@@ -48,6 +55,12 @@ import imgMorena from '../../src/assets/Partners/ShopIgartua 1.webp';
     { key: "all", name: "Todos" }
 ];
  */
+
+
+
+
+
+
 function PortafolioComponent() {
   /* const [activeFilter, setActiveFilter] = useState("all");
 
@@ -55,6 +68,26 @@ function PortafolioComponent() {
     ? allProjects
     : allProjects.filter(project => project.category === activeFilter);
  */
+
+
+
+    const videos = [
+    { id: "1153736080", title: "Caso 1" },
+    { id: "1153736181", title: "Caso 2" },
+    { id: "1153736191", title: "Caso 3" },
+    { id: "1153736109", title: "Caso 4" },
+    { id: "1153736150", title: "Caso 5" },
+    { id: "1153736163", title: "Caso 6" },
+  ];
+
+  const banners = [
+  { src: Banner1, alt: "Banner 1" },
+  { src: Banner2, alt: "Banner 2" },
+  { src: Banner3, alt: "Banner 3" },
+  { src: Banner4, alt: "Banner 4" },
+  { src: Banner5, alt: "Banner 5" },
+  { src: Banner6, alt: "Banner 6" },
+];
   return (
     <>
       <section className={styles.heroSection}>
@@ -105,6 +138,60 @@ function PortafolioComponent() {
           )}
         </div>
       </section> */}
+
+
+
+       {/* NUEVA SECCIÓN DE VIDEOS */}
+      <section className={styles.videosSection}>
+        <div className={styles.videosHeader}>
+          <h2 className={styles.videosTitle}>Videos de resultados</h2>
+          <p className={styles.videosSubtitle}>
+            Una muestra rápida de ejecuciones y resultados en diferentes proyectos.
+          </p>
+        </div>
+
+        <div className={styles.videosGrid}>
+          {videos.map((v) => (
+            <article key={v.id} className={styles.videoCard}>
+              <div className={styles.videoFrame}>
+                <iframe
+                  src={`https://player.vimeo.com/video/${v.id}`}
+                  title={v.title}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+
+              <div className={styles.videoMeta}>
+                <h3 className={styles.videoName}>{v.title}</h3>
+               
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+       {/* NUEVA SECCIÓN DE BANNERS */}
+    <section className={styles.bannersSection}>
+      <div className={styles.bannersHeader}>
+        <h2 className={styles.bannersTitle}>Así se ve una estrategia bien ejecutada</h2>
+        <p className={styles.bannersSubtitle}>
+       Ejemplos visuales de cómo llevamos las ideas a producción.
+        </p>
+      </div>
+
+      <div className={styles.bannersGrid}>
+        {banners.map((b, idx) => (
+          <figure key={idx} className={styles.bannerCard}>
+            <div className={styles.bannerFrame}>
+              <img src={b.src} alt={b.alt} loading="lazy" />
+            </div>
+          </figure>
+        ))}
+      </div>
+    </section>
     </>
   );
 }
