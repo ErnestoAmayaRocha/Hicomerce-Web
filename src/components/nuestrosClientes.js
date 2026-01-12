@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import styles from './Ourclients.module.css';
 
 import cliente1 from '../../src/assets/Clients/logosblack/bocablanca.png'; 
-import cliente2 from '../../src/assets/Clients/logon/cklass.webp';
-import cliente3 from '../../src/assets/Clients/logosblack/negromostaza.png';
+/* import cliente2 from '../../src/assets/Clients/logon/cklass.webp';
+ */import cliente3 from '../../src/assets/Clients/logosblack/negromostaza.png';
 import cliente4 from '../../src/assets/Clients/logosblack/deyac_.png';
 import cliente5 from '../../src/assets/Clients/logosblack/rouebikes.png';
 import cliente6 from '../../src/assets/Clients/logosblack/xilin.png';
