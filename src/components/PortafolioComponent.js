@@ -1,11 +1,11 @@
 /* import React, { useState } from "react"; */
 import styles from "./PortafolioPage.module.css";
-import Banner1 from "../../src/assets/Portafolio/1-CKLASS.png";
-import Banner2 from "../../src/assets/Portafolio/2-ESTILO ROJO.png";
-import Banner3 from "../../src/assets/Portafolio/3-NM.png";
-import Banner4 from "../../src/assets/Portafolio/4-SHOP-NM.png";
-import Banner5 from "../../src/assets/Portafolio/5-UNIQ.png";
-import Banner6 from "../../src/assets/Portafolio/6-UNIQ-MELI.png";
+import Banner1 from "../../src/assets/Portafolio/1-CKLASS.webp";
+import Banner2 from "../../src/assets/Portafolio/2-ESTILO ROJO.webp";
+import Banner3 from "../../src/assets/Portafolio/3-NM.webp";
+import Banner4 from "../../src/assets/Portafolio/4-SHOP-NM.webp";
+import Banner5 from "../../src/assets/Portafolio/5-UNIQ.webp";
+import Banner6 from "../../src/assets/Portafolio/6-UNIQ-MELI.webp";
 
 import HeroIMG from "../../src/assets/Portafolio/resultados.webp"
 /* import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
