@@ -72,12 +72,12 @@ function PortafolioComponent() {
 
 
     const videos = [
-    { id: "1153736080", title: "Caso 1" },
+    { id: "1153736163", title: "Caso 1" },
     { id: "1153736181", title: "Caso 2" },
     { id: "1153736191", title: "Caso 3" },
     { id: "1153736109", title: "Caso 4" },
     { id: "1153736150", title: "Caso 5" },
-    { id: "1153736163", title: "Caso 6" },
+    { id: "1153736080", title: "Caso 6" },
   ];
 
   const banners = [
