@@ -155,7 +155,7 @@ function PortafolioComponent() {
             <article key={v.id} className={styles.videoCard}>
               <div className={styles.videoFrame}>
                 <iframe
-                  src={`https://player.vimeo.com/video/${v.id}`}
+                  src={`https://player.vimeo.com/video/${v.id}?loop=1`}
                   title={v.title}
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
