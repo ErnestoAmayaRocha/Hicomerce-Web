@@ -56,6 +56,13 @@
     .BGAzulCielo {
       background-color: var(--azulCielo);
     }
+    .BGBlanco {
+      background-color: var(--textoBlanco);
+    }
+    .BGAzul {
+      background-color: var(--azul);
+      color: black;
+    }
     .BGAzulMarca {
       background-color: var(--azul);
       color: var(--textoBlanco);
@@ -81,3 +88,5 @@
       white-space: nowrap;
       border-width: 0;
     }
+
+    

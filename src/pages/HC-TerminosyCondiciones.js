@@ -86,7 +86,7 @@ function TerminosServicio() {
             Este documento establece las condiciones que rigen el uso de este
             sitio web{" "}
             <strong>
-              https://www.hicomerce.com/servicios-de-inteligencia-artificial-por-hicomerce
+              https://www.hicomerce.com.mx
             </strong>{" "}
             y la contratación de productos o servicios a través del mismo
             (en adelante, las &quot;Condiciones&quot;).
@@ -135,7 +135,7 @@ function TerminosServicio() {
           <p>
             Al utilizar este sitio web{" "}
             <strong>
-              (https://www.hicomerce.com/Servicios-de-inteligencia-artificial-por-Hicomerce)
+              (https://www.hicomerce.com.mx)
             </strong>{" "}
             y realizar pedidos a través de él, usted se compromete a:
           </p>
