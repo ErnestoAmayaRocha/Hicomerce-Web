@@ -8,8 +8,6 @@ import Banner5 from "../../src/assets/Portafolio/5-UNIQ.webp";
 import Banner6 from "../../src/assets/Portafolio/6-UNIQ-MELI.webp";
 import PDF from "../../src/assets/Portafolio/PDF-VENTAS.pdf";
 
-import { Link } from "react-router-dom";
-
 import HeroIMG from "../../src/assets/Portafolio/resultados_1335x888.webp"
 /* import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
 import imgBobois from '../../src/assets/Clients/ImageUNIQ.webp';
