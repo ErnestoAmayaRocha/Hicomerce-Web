@@ -103,7 +103,7 @@ section h3[data-reveal="in"] {
 }
 
 
-#Accion-Hero .BGAzul {
+#Accion-Hero .BGNaranja {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -123,13 +123,13 @@ section h3[data-reveal="in"] {
 }
 
 /* HOVER */
-#Accion-Hero .BGAzul:hover {
+#Accion-Hero .BGNaranja:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 10px black;
 }
 
 /* Glow hover */
-#Accion-Hero .BGAzul::before {
+#Accion-Hero .BGNaranja::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -148,7 +148,7 @@ section h3[data-reveal="in"] {
 }
 
 /* Shine automático cada 12s */
-#Accion-Hero .BGAzul::after {
+#Accion-Hero .BGNaranja::after {
   content: "";
   position: absolute;
   top: 0;
@@ -165,6 +165,32 @@ section h3[data-reveal="in"] {
 }
 
 /* Click */
-#Accion-Hero .BGAzul:active {
+#Accion-Hero .BGNaranja:active {
   transform: scale(0.97);
+}
+
+
+/* HOVER */
+#Accion-Hero .BGNaranja:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 10px black;
+}
+
+/* Glow hover */
+#Accion-Hero .BGNaranja::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+#Accion-Hero .BGNaranja:hover::before {
+  transform: translateX(100%);
 }

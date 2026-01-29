@@ -41,7 +41,7 @@ function NosotrosAliado360() {
               Todo para que conquistes el mercado digital sin perder tiempo ni
               foco.
             </p>
-            <Link className="BGAzul" to="/contacto">
+            <Link className="BGNaranja" to="/contacto">
               Solicita tu diagnóstico gratis
             </Link>
           </figcaption>

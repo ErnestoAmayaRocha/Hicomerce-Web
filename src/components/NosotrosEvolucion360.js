@@ -23,7 +23,7 @@ function NosotrosEvolucion360() {
               optimización constante, evitando que pierdas tiempo y dinero en
               pruebas innecesarias o enfoques ineficientes.
             </p>
-            <Link className="BGAzul" to="/contacto">
+            <Link className="BGNaranja" to="/contacto">
               Solicita tu diagnóstico gratis
             </Link>
           </figcaption>

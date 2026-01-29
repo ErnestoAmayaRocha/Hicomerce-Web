@@ -101,7 +101,7 @@ function PortafolioComponent() {
             muestran lo que HiComerce puede hacer por ti.
           </p>
           <a
-            className="BGAzul"
+            className="BGNaranja"
             href={PDF}
             download
             target="_blank"

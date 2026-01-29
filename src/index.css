@@ -63,6 +63,10 @@
       background-color: var(--azul);
       color: black;
     }
+    .BGNaranja {
+      background-color: var(--naranja);
+      color: white;
+    }
     .BGAzulMarca {
       background-color: var(--azul);
       color: var(--textoBlanco);

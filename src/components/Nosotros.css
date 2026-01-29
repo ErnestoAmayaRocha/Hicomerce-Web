@@ -5,8 +5,8 @@ section {
 
 
 
-#nosotros-evolucion-360 .BGAzul,
-#nosotros-aliado360 .BGAzul {
+#nosotros-evolucion-360 .BGNaranja,
+#nosotros-aliado360 .BGNaranja {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,15 +26,15 @@ section {
 }
 
 /* HOVER */
-#nosotros-evolucion-360 .BGAzul:hover,
-#nosotros-aliado360 .BGAzul:hover {
+#nosotros-evolucion-360 .BGNaranja:hover,
+#nosotros-aliado360 .BGNaranja:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 10px black;
 }
 
 /* Glow hover */
-#nosotros-evolucion-360 .BGAzul::before,
-#nosotros-aliado360 .BGAzul::before {
+#nosotros-evolucion-360 .BGNaranja::before,
+#nosotros-aliado360 .BGNaranja::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -48,14 +48,14 @@ section {
   transition: transform 0.6s ease;
 }
 
-#nosotros-evolucion-360 .BGAzul:hover::before,
-#nosotros-aliado360 .BGAzul:hover::before {
+#nosotros-evolucion-360 .BGNaranja:hover::before,
+#nosotros-aliado360 .BGNaranja:hover::before {
   transform: translateX(100%);
 }
 
 /* Shine automático cada 12s */
-#nosotros-evolucion-360 .BGAzul::after,
-#nosotros-aliado360 .BGAzul::after {
+#nosotros-evolucion-360 .BGNaranja::after,
+#nosotros-aliado360 .BGNaranja::after {
   content: "";
   position: absolute;
   top: 0;
@@ -72,8 +72,8 @@ section {
 }
 
 /* Click */
-#nosotros-evolucion-360 .BGAzul:active,
-#nosotros-aliado360 .BGAzul:active {
+#nosotros-evolucion-360 .BGNaranja:active,
+#nosotros-aliado360 .BGNaranja:active {
   transform: scale(0.97);
 }
 
