@@ -4,14 +4,14 @@ import banner1 from "../../src/assets/Nosotros/trabajamos-solo-con-empresas-de-a
 
 function NosotrosEmpresasAltoNivel() {
   return (
-    <section id="nosotros-empresas-alto-nivel" aria-labelledby="nosotros-empresas-title">
+    <section id="nosotros-empresas-alto-nivel">
       <article>
         <h2 id="nosotros-empresas-title">
           ¿Por qué trabajamos solo con empresas de alto nivel?
         </h2>
       </article>
 
-      <article aria-labelledby="nosotros-empresas-title">
+      <article>
         <figure>
           <img
             src={banner1}

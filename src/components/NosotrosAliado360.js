@@ -1,11 +1,12 @@
 import React from "react";
-
 import banner1 from "../../src/assets/Nosotros/aliado-360-para-empresas-que-quieren-liderar.webp";
+import { Link } from "react-router-dom";
+
 
 function NosotrosAliado360() {
   return (
-    <section id="nosotros-aliado360" aria-labelledby="nosotros-aliado-title">
-      <article aria-labelledby="nosotros-aliado-title">
+    <section id="nosotros-aliado360">
+      <article>
         <figure>
           <img
             src={banner1}
@@ -40,6 +41,9 @@ function NosotrosAliado360() {
               Todo para que conquistes el mercado digital sin perder tiempo ni
               foco.
             </p>
+            <Link className="BGAzul" to="/contacto">
+              Solicita tu diagnóstico gratis
+            </Link>
           </figcaption>
         </figure>
       </article>

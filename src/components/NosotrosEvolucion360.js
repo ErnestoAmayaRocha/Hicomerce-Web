@@ -1,11 +1,13 @@
 import React from "react";
 
 import banner1 from "../../src/assets/Nosotros/evolucion-digital-360.webp";
+import { Link } from "react-router-dom";
+
 
 function NosotrosEvolucion360() {
   return (
-    <section id="nosotros-evolucion-360" aria-labelledby="nosotros-evolucion-title">
-      <article aria-labelledby="nosotros-evolucion-title">
+    <section id="nosotros-evolucion-360">
+      <article>
         <figure>
           <figcaption>
             <h2 id="nosotros-evolucion-title">Tu Evolución Digital 360°</h2>
@@ -21,6 +23,9 @@ function NosotrosEvolucion360() {
               optimización constante, evitando que pierdas tiempo y dinero en
               pruebas innecesarias o enfoques ineficientes.
             </p>
+            <Link className="BGAzul" to="/contacto">
+              Solicita tu diagnóstico gratis
+            </Link>
           </figcaption>
 
           <img

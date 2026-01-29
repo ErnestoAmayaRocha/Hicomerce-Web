@@ -124,7 +124,7 @@ function FooterHC() {
 
         {/* --- Columna 5: Logo --- */}
         <div className={styles.columnaLogo}>
-          <Link to="/">
+          <Link to="/" title="Hicomerce">
             <Logo />
           </Link>
         </div>

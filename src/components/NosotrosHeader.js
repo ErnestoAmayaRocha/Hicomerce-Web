@@ -4,7 +4,7 @@ import banner1 from "../../src/assets/Nosotros/somos-tu-equipo-de-crecimiento-di
 
 function NosotrosHeader() {
   return (
-    <section id="nosotros-header" aria-labelledby="nosotros-header-title">
+    <section id="nosotros-header">
       <figure className="BGBlanco">
         <img
           src={banner1}

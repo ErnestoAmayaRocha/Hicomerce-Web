@@ -2,7 +2,7 @@ import React from "react";
 
 function NosotrosDiferente() {
   return (
-    <section id="nosotros-diferente" aria-labelledby="nosotros-diferente-title">
+    <section id="nosotros-diferente">
       <article>
         <h2 id="nosotros-diferente-title">¿Qué nos hace diferentes?</h2>
         <p>
@@ -11,9 +11,9 @@ function NosotrosDiferente() {
         </p>
       </article>
 
-      <article aria-label="Pilares de la metodología">
-        <div className="BGBlanco" role="group" aria-labelledby="pilar-1-title">
-          <span className="BGAzul" aria-hidden="true">1</span>
+      <article>
+        <div className="BGBlanco" role="group">
+          <span className="BGAzul">1</span>
           <h3 id="pilar-1-title">Consultoría estratégica</h3>
           <p>
             Antes de ejecutar, entendemos. Analizamos a fondo tu negocio, tus
@@ -33,8 +33,8 @@ function NosotrosDiferente() {
           </p>
         </div>
 
-        <div className="BGBlanco" role="group" aria-labelledby="pilar-2-title">
-          <span className="BGAzul" aria-hidden="true">2</span>
+        <div className="BGBlanco" role="group">
+          <span className="BGAzul">2</span>
           <h3 id="pilar-2-title">Ejecución de soluciones digitales</h3>
           <p>
             Con la estrategia clara, pasamos a la acción. Nuestro equipo
@@ -56,8 +56,8 @@ function NosotrosDiferente() {
           </p>
         </div>
 
-        <div className="BGBlanco" role="group" aria-labelledby="pilar-3-title">
-          <span className="BGAzul" aria-hidden="true">3</span>
+        <div className="BGBlanco" role="group">
+          <span className="BGAzul">3</span>
           <h3 id="pilar-3-title">Growth Hacking y crecimiento acelerado</h3>
           <p>
             No creemos en el crecimiento lento por inercia. Aplicamos
@@ -75,8 +75,8 @@ function NosotrosDiferente() {
           </p>
         </div>
 
-        <div className="BGBlanco" role="group" aria-labelledby="pilar-4-title">
-          <span className="BGAzul" aria-hidden="true">4</span>
+        <div className="BGBlanco" role="group">
+          <span className="BGAzul">4</span>
           <h3 id="pilar-4-title">Inteligencia artificial y automatización</h3>
           <p>
             La eficiencia es clave para escalar. Por eso incorporamos un pilar

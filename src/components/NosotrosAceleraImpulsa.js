@@ -5,8 +5,8 @@ import banner2 from "../../src/assets/Nosotros/impulsando-empress-de-alto-desemp
 
 function NosotrosAceleraImpulsa() {
   return (
-    <section id="nosotros-acelera-impulsa" aria-labelledby="nosotros-acelera-title">
-      <article aria-labelledby="nosotros-acelera-title">
+    <section id="nosotros-acelera-impulsa">
+      <article>
         <figure>
           <img
             src={banner1}
@@ -41,7 +41,7 @@ function NosotrosAceleraImpulsa() {
         </figure>
       </article>
 
-      <article aria-labelledby="nosotros-experiencia-title">
+      <article>
         <figure>
           <img
             src={banner2}

@@ -6,6 +6,9 @@ import Banner3 from "../../src/assets/Portafolio/3-NM.webp";
 import Banner4 from "../../src/assets/Portafolio/4-SHOP-NM.webp";
 import Banner5 from "../../src/assets/Portafolio/5-UNIQ.webp";
 import Banner6 from "../../src/assets/Portafolio/6-UNIQ-MELI.webp";
+import PDF from "../../src/assets/Portafolio/PDF-VENTAS.pdf";
+
+import { Link } from "react-router-dom";
 
 import HeroIMG from "../../src/assets/Portafolio/resultados_1335x888.webp"
 /* import imgAmatina from '../../src/assets/SV_IA/adsMarket.webp';
@@ -90,7 +93,7 @@ function PortafolioComponent() {
 ];
   return (
     <>
-      <section className={styles.heroSection}>
+      <section className={styles.heroSection} id="Accion-Hero">
         <div className={styles.heroBackground}>
           <img src={HeroIMG} alt="Imagen del Hero Portafolio" className={styles.heroBackground}/>
           <h1>Resultados en Acción</h1>
@@ -99,6 +102,15 @@ function PortafolioComponent() {
             tecnología. Desde sitios web hasta campañas virales, estos ejemplos
             muestran lo que HiComerce puede hacer por ti.
           </p>
+          <a
+            className="BGAzul"
+            href={PDF}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Descarga nuestros casos de éxito
+          </a>
         </div>
       </section>
     {/*   <section className={styles.headerSection}>

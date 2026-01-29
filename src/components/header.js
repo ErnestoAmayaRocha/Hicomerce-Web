@@ -107,7 +107,7 @@ function HeaderHC() {
         <div className={styles.line3}></div>
       </button>
       
-      <Link to="/" className={styles.logo} onClick={closeAllMenus}>
+      <Link to="/" className={styles.logo} onClick={closeAllMenus} title="Ir al inicio">
         <Logo />
       </Link>
       
